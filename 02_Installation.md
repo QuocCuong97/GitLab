@@ -21,7 +21,7 @@
 
     > ***Lưu ý :*** 
     - **Gitlab Omnibus** bao gồm nhiều gói package bên trong như: NginX, Postgresql, Redis, Sidekiq, Unicorn, .. nên dung lượng khá nặng.
-    - Nếu trên server đang sử dụng Nginx làm web server thì có thể bị trùng cổng. Chúng ta có thể disable gói Nginx trong Gitlab Omnibus đi để dùng Nginx có sẵn.
+    - Nếu trên server đang sử dụng Nginx làm web server thì có thể bị trùng port `80` hoặc `443`. Chúng ta có thể disable gói Nginx trong **Gitlab Omnibus** đi để dùng Nginx có sẵn.
 - **B5 :** Cho phép port `80` qua `firewalld` :
     ```
     # firewall-cmd --zone=public --permanent --add-port=80/tcp
